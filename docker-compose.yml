@@ -3,11 +3,10 @@ version: "2"
 services:
 
   PaddleOCR:
-    container_name: paddle_ocr_api
-    image: paddleocrapi:cgc-v1
+    container_name: paddle_ocr_api # 自定义容器名
+    image: paddleocrapi:cgc-v1 # 第2步自定义的镜像名与标签
     environment:
       - TZ=Asia/Hong_Kong
     ports:
-     - 10778:8000
+    - 10778:8000 # 自定义服务暴露端口, 8000为FastAPI默认端口, 不做修改
     restart: unless-stopped
-
