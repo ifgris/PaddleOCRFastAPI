@@ -1,5 +1,4 @@
 __pycache__/
 *.png
 *.jpg
-*.in
 test.py

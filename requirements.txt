@@ -10,8 +10,10 @@ paddleocr==2.5.0.3
     # via -r requirements.in
 paddlepaddle==2.3.1
     # via -r requirements.in
+python-multipart==0.0.5
+    # via -r requirements.in
 uvicorn==0.18.2
     # via -r requirements.in
-python-multipart==0.0.5
+
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
