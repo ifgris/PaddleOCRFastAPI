@@ -1,13 +1,12 @@
 # SimplePaddleOCRApi
 
-一个可 Docker(compose) 部署的简易版 Paddle OCR Web API.
+一个可 Docker(compose) 部署的, 基于 `FastAPI` 的简易版 Paddle OCR Web API.
 
 ## 接口功能
 
 - [x] 局域网范围内路径图片 OCR 识别
 - [x] Base64 数据识别
-- [ ] 上传文件识别
-- [ ] 异步支持
+- [x] 上传文件识别
 
 ## 部署方式
 
@@ -47,4 +46,4 @@
    ```shell
    docker-compose up -d
    ```
-
+   
