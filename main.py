@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import uvicorn
+# import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -26,4 +26,4 @@ app.add_middleware(
 
 app.include_router(ocr.router)
 
-uvicorn.run(app=app, host="0.0.0.0", port=8000, debug=True)
+# uvicorn.run(app=app, host="0.0.0.0", port=8000, debug=True)
