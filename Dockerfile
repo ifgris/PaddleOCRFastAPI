@@ -1,5 +1,7 @@
 FROM python:3.7
 
+EXPOSE 8000
+
 # 设置当前目录为工作目录
 WORKDIR ./
 
