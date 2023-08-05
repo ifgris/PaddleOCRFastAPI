@@ -33,7 +33,7 @@
 
      PaddleOCR:
        container_name: paddle_ocr_api # 自定义容器名
-       image: paddleocrapi:cgc-v1 # 第2步自定义的镜像名与标签
+       image: paddleocrapi:latest # 第2步自定义的镜像名与标签
        environment:
          - TZ=Asia/Hong_Kong
        ports:
