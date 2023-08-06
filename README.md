@@ -1,6 +1,6 @@
 # SimplePaddleOCRApi
 
-一个可 Docker(compose) 部署的, 基于 `FastAPI` 的简易版 Paddle OCR Web API.
+一个可 Docker (Compose) 部署的, 基于 `FastAPI` 的简易版 Paddle OCR Web API.
 
 ## 接口功能
 
@@ -10,7 +10,7 @@
 
 ## 部署方式
 
-在 `Centos7` 的服务器中测试成功, 需要先安装好 `Docker`
+在 `Centos7`, `Windows 10`, `Windows 11` 中测试成功, 需要先安装好 `Docker`.
 
 1. 复制项目至部署路径
 
@@ -27,7 +27,7 @@
 3. 编辑 `docker-compose.yml`
 
    ```yaml
-   version: "2"
+   version: "3"
 
    services:
 
@@ -46,4 +46,6 @@
    ```shell
    docker-compose up -d
    ```
-   
+
+## 运行截图
+

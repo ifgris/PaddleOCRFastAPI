@@ -1,13 +1,14 @@
-FROM python:3.7
+FROM python:3.7-slim-bullseye
 
 EXPOSE 8000
 
 # 设置当前目录为工作目录
-WORKDIR ./
+WORKDIR /app
 
-ADD . .
+COPY . /app
 
 # apt-get换源并安装依赖
+# RUN apt install apt-transport-https ca-certificates
 RUN sed -i "s@http://deb.debian.org@http://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list
 RUN cat /etc/apt/sources.list
 RUN rm -rf /var/lib/apt/lists/*
