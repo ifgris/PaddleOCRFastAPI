@@ -51,3 +51,4 @@
 
 ## 运行截图
 
+![Swagger](https://raw.githubusercontent.com/cgcel/SimplePaddleOCRApi/dev/screenshots/Swagger.png)
