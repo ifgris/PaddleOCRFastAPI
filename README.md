@@ -37,7 +37,7 @@
        environment:
          - TZ=Asia/Hong_Kong
        ports:
-        - 10778:8000 # 自定义服务暴露端口, 8000为FastAPI默认端口, 不做修改
+        - 8000:8000 # 自定义服务暴露端口, 8000为FastAPI默认端口, 不做修改
        restart: unless-stopped
    ```
 
@@ -46,6 +46,8 @@
    ```shell
    docker-compose up -d
    ```
+
+5. Swagger 页面请访问 localhost:\<port\>/docs
 
 ## 运行截图
 
