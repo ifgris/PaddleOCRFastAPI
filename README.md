@@ -2,6 +2,13 @@
 
 一个可 Docker (Compose) 部署的, 基于 `FastAPI` 的简易版 Paddle OCR Web API.
 
+## 版本选择
+
+| PaddleOCR | Branch |
+| :--: | :--: |
+| v2.5 | [paddleocr-v2.5](https://github.com/cgcel/SimplePaddleOCRApi/tree/paddleocr-v2.5) |
+| v2.7 | [paddleocr-v2.7](https://github.com/cgcel/SimplePaddleOCRApi/tree/paddleocr-v2.7) |
+
 ## 接口功能
 
 - [x] 局域网范围内路径图片 OCR 识别
