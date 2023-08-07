@@ -4,15 +4,15 @@
 #
 #    pip-compile
 #
-fastapi==0.79.0
+fastapi==0.101.0
     # via -r requirements.in
-paddleocr==2.5.0.3
+paddleocr==2.7.0.0
     # via -r requirements.in
-paddlepaddle==2.3.1
+paddlepaddle==2.5.1
     # via -r requirements.in
-python-multipart==0.0.5
+python-multipart==0.0.6
     # via -r requirements.in
-uvicorn==0.18.2
+uvicorn==0.23.2
     # via -r requirements.in
 
 # The following packages are considered to be unsafe in a requirements file:
