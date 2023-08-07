@@ -1,4 +1,4 @@
-# SimplePaddleOCRApi
+# PaddleOCRFastAPI
 
 一个可 Docker (Compose) 部署的, 基于 `FastAPI` 的简易版 Paddle OCR Web API.
 
@@ -17,6 +17,31 @@
 
 ## 部署方式
 
+### 直接部署
+
+1. 复制项目至部署路径
+
+   ```shell
+   git clone https://github.com/cgcel/SimplePaddleOCRApi.git
+   ```
+
+   > *master 分支为项目中支持的 PaddleOCR 的最新版本, 如需安装特定版本, 请克隆对应版本号的分支.*
+
+2. (可选) 新建虚拟环境, 避免依赖冲突
+3. 安装所需依赖
+
+   ```shell
+   pip3 install -r requirements.txt
+   ```
+
+4. 运行 FastAPI
+
+   ```shell
+   uvicorn main:app --host 0.0.0.0
+   ```
+
+### Docker 部署
+
 在 `Centos7`, `Windows 10`, `Windows 11` 中测试成功, 需要先安装好 `Docker`.
 
 1. 复制项目至部署路径
@@ -24,6 +49,8 @@
    ```shell
    git clone https://github.com/cgcel/SimplePaddleOCRApi.git
    ```
+
+   > *master 分支为项目中支持的 PaddleOCR 的最新版本, 如需安装特定版本, 请克隆对应版本号的分支.*
 
 2. 制作 Docker 镜像
 
