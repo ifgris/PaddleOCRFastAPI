@@ -42,7 +42,7 @@
 
 ### Docker 部署
 
-在 `Centos7`, `Windows 10`, `Windows 11` 中测试成功, 需要先安装好 `Docker`.
+在 `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Windows 11` 中测试成功, 需要先安装好 `Docker`.
 
 1. 复制项目至部署路径
 
