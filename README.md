@@ -11,11 +11,11 @@ A Docker (Compose) deployable, simple version of the `FastAPI` based Paddle OCR 
 | v2.5 | [paddleocr-v2.5](https://github.com/cgcel/PaddleOCRFastAPI/tree/paddleocr-v2.5) |
 | v2.7 | [paddleocr-v2.7](https://github.com/cgcel/PaddleOCRFastAPI/tree/paddleocr-v2.7) |
 
-## WebAPI Functions
+## Features
 
-- [x] LAN-wide path image OCR recognition
+- [x] Local path image recognition
 - [x] Base64 data recognition
-- [x] Upload File Recognition
+- [x] Upload file recognition
 
 ## Deployment Methods
 
@@ -80,18 +80,24 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
 4. Create the Docker container and run
 
    ```shell
-   docker-compose up -d
+   docker compose up -d
    ```
 
-5. Swagger Page at localhost:\<port\>/docs
+5. Swagger Page at `localhost:<port>/docs`
 
 ## Screenshots
 
 ![Swagger](https://raw.githubusercontent.com/cgcel/PaddleOCRFastAPI/dev/screenshots/Swagger.png)
 
+## Todo
+
+- [ ] support ppocr v4
+- [ ] GPU mode
+- [ ] Image url recognition
+
 ## License
 
-```
+```License
 Copyright 2023 GC Chen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
