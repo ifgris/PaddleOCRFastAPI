@@ -3,3 +3,5 @@ paddlepaddle
 paddleocr
 uvicorn
 python-multipart
+requests
+numpy
