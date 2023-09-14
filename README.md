@@ -1,30 +1,68 @@
-# SimplePaddleOCRApi
+# PaddleOCRFastAPI
 
-一个可 Docker (Compose) 部署的, 基于 `FastAPI` 的简易版 Paddle OCR Web API.
+![GitHub](https://img.shields.io/github/license/cgcel/PaddleOCRFastAPI)
 
-## 接口功能
+[中文](https://github.com/cgcel/PaddleOCRFastAPI/blob/master/README_CN.md)
 
-- [x] 局域网范围内路径图片 OCR 识别
-- [x] Base64 数据识别
-- [x] 上传文件识别
+A simple way to deploy `PaddleOCR` based on `FastAPI`.
 
-## 部署方式
+## Support Version
 
-在 `Centos7`, `Windows 10`, `Windows 11` 中测试成功, 需要先安装好 `Docker`.
+| PaddleOCR | Branch |
+| :--: | :--: |
+| v2.5 | [paddleocr-v2.5](https://github.com/cgcel/PaddleOCRFastAPI/tree/paddleocr-v2.5) |
+| v2.7 | [paddleocr-v2.7](https://github.com/cgcel/PaddleOCRFastAPI/tree/paddleocr-v2.7) |
 
-1. 复制项目至部署路径
+## Features
+
+- [x] Local path image recognition
+- [x] Base64 data recognition
+- [x] Upload file recognition
+
+## Deployment Methods
+
+### Deploy Directly
+
+1. Copy the project to the deployment path
 
    ```shell
-   git clone https://github.com/cgcel/SimplePaddleOCRApi.git
+   git clone https://github.com/cgcel/PaddleOCRFastAPI.git
    ```
 
-2. 制作 Docker 镜像
+   > *The master branch is the most recent version of PaddleOCR supported by the project. To install a specific version, clone the branch with the corresponding version number.*
+
+2. (Optional) Create new virtual environment to avoid dependency conflicts
+3. Install required dependencies
+
+   ```shell
+   pip3 install -r requirements.txt
+   ```
+
+4. Run FastAPI
+
+   ```shell
+   uvicorn main:app --host 0.0.0.0
+   ```
+
+### Docker Deployment
+
+Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Windows 11`, requires `Docker` to be installed.
+
+1. Copy the project to the deployment path
+
+   ```shell
+   git clone https://github.com/cgcel/PaddleOCRFastAPI.git
+   ```
+
+   > *The master branch is the most recent version of PaddleOCR supported by the project. To install a specific version, clone the branch with the corresponding version number.*
+
+2. Building a Docker Image
 
    ```shell
    docker build -t paddleocrapi:<your_tag> .
    ```
 
-3. 编辑 `docker-compose.yml`
+3. Edit `docker-compose.yml`
 
    ```yaml
    version: "3"
@@ -32,23 +70,33 @@
    services:
 
      PaddleOCR:
-       container_name: paddle_ocr_api # 自定义容器名
-       image: paddleocrapi:latest # 第2步自定义的镜像名与标签
+       container_name: paddle_ocr_api # Custom Container Name
+       image: paddleocrapi:<your_tag> # Customized Image Name & Label in Step 2
        environment:
          - TZ=Asia/Hong_Kong
        ports:
-        - 8000:8000 # 自定义服务暴露端口, 8000为FastAPI默认端口, 不做修改
+        - 8000:8000 # Customize the service exposure port, 8000 is the default FastAPI port, do not modify
        restart: unless-stopped
    ```
 
-4. 生成 Docker 容器并运行
+4. Create the Docker container and run
 
    ```shell
-   docker-compose up -d
+   docker compose up -d
    ```
 
-5. Swagger 页面请访问 localhost:\<port\>/docs
+5. Swagger Page at `localhost:<port>/docs`
 
-## 运行截图
+## Screenshots
 
-![Swagger](https://raw.githubusercontent.com/cgcel/SimplePaddleOCRApi/dev/screenshots/Swagger.png)
+![Swagger](https://raw.githubusercontent.com/cgcel/PaddleOCRFastAPI/dev/screenshots/Swagger.png)
+
+## Todo
+
+- [ ] support ppocr v4
+- [ ] GPU mode
+- [ ] Image url recognition
+
+## License
+
+**PaddleOCRFastAPI** is licensed under the MIT license. Refer to [LICENSE](https://github.com/cgcel/PaddleOCRFastAPI/blob/master/LICENSE) for more information.
