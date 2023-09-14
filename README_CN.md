@@ -55,7 +55,7 @@
 2. 制作 Docker 镜像
 
    ```shell
-   docker build -t paddleocrapi:<your_tag> .
+   docker build -t paddleocrfastapi:<your_tag> .
    ```
 
 3. 编辑 `docker-compose.yml`
@@ -65,9 +65,9 @@
 
    services:
 
-     PaddleOCR:
-       container_name: paddle_ocr_api # 自定义容器名
-       image: paddleocrapi:<your_tag> # 第2步自定义的镜像名与标签
+     paddleocrfastapi:
+       container_name: paddleocrfastapi # 自定义容器名
+       image: paddleocrfastapi:<your_tag> # 第2步自定义的镜像名与标签
        environment:
          - TZ=Asia/Hong_Kong
        ports:
@@ -87,14 +87,12 @@
 
 ![Swagger](https://raw.githubusercontent.com/cgcel/PaddleOCRFastAPI/dev/screenshots/Swagger.png)
 
+## Todo
+
+- [ ] support ppocr v4
+- [ ] GPU mode
+- [x] Image url recognition
+
 ## License
 
-```
-Copyright 2023 GC Chen
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-```
+**PaddleOCRFastAPI** is licensed under the MIT license. Refer to [LICENSE](https://github.com/cgcel/PaddleOCRFastAPI/blob/master/LICENSE) for more information.

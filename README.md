@@ -59,7 +59,7 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
 2. Building a Docker Image
 
    ```shell
-   docker build -t paddleocrapi:<your_tag> .
+   docker build -t paddleocrfastapi:<your_tag> .
    ```
 
 3. Edit `docker-compose.yml`
@@ -69,9 +69,9 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
 
    services:
 
-     PaddleOCR:
-       container_name: paddle_ocr_api # Custom Container Name
-       image: paddleocrapi:<your_tag> # Customized Image Name & Label in Step 2
+     paddleocrfastapi:
+       container_name: paddleocrfastapi # Custom Container Name
+       image: paddleocrfastapi:<your_tag> # Customized Image Name & Label in Step 2
        environment:
          - TZ=Asia/Hong_Kong
        ports:
@@ -95,7 +95,7 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
 
 - [ ] support ppocr v4
 - [ ] GPU mode
-- [ ] Image url recognition
+- [x] Image url recognition
 
 ## License
 
