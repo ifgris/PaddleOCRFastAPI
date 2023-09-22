@@ -93,7 +93,7 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
 
 ## Todo
 
-- [ ] support ppocr v4
+- [x] support ppocr v4
 - [ ] GPU mode
 - [x] Image url recognition
 
