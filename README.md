@@ -87,6 +87,19 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
 
 5. Swagger Page at `localhost:<port>/docs`
 
+## Change language
+
+1. Clone this repo to localhost
+2. Edit `routers/ocr.py`, modify the parameter "lang":
+
+   ```python
+   ocr = PaddleOCR(use_angle_cls=True, lang="ch")
+   ```
+
+   Before modify, read the [supported language list](https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.7/doc/doc_en/multi_languages_en.md#5-support-languages-and-abbreviations).
+
+3. Rebuild the docker image, or run the `main.py` directly.
+
 ## Screenshots
 
 ![Swagger](https://raw.githubusercontent.com/cgcel/PaddleOCRFastAPI/dev/screenshots/Swagger.png)
