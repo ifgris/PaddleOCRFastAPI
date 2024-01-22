@@ -89,7 +89,7 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
 
 ## Change language
 
-1. Clone this repo to localhost
+1. Clone this repo to localhost.
 2. Edit `routers/ocr.py`, modify the parameter "lang":
 
    ```python

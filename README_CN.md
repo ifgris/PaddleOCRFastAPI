@@ -83,6 +83,19 @@
 
 5. Swagger 页面请访问 localhost:\<port\>/docs
 
+## Change language
+
+1. 将此仓库克隆至本地.
+2. 编辑 `routers/ocr.py`, 修改参数 "lang":
+
+   ```python
+   ocr = PaddleOCR(use_angle_cls=True, lang="ch")
+   ```
+
+   编辑前, 先阅读 [supported language list](https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.7/doc/doc_en/multi_languages_en.md#5-support-languages-and-abbreviations).
+
+3. 重新创建 docker 镜像, 或直接运行 `main.py`.
+
 ## 运行截图
 
 ![Swagger](https://raw.githubusercontent.com/cgcel/PaddleOCRFastAPI/dev/screenshots/Swagger.png)
