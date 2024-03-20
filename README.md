@@ -74,6 +74,7 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
        image: paddleocrfastapi:<your_tag> # Customized Image Name & Label in Step 2
        environment:
          - TZ=Asia/Hong_Kong
+         - OCR_LANGUAGE=ch # support 80 languages. refer to https://github.com/Mushroomcat9998/PaddleOCR/blob/main/doc/doc_en/multi_languages_en.md#language_abbreviations
        ports:
         - 8000:8000 # Customize the service exposure port, 8000 is the default FastAPI port, do not modify
        restart: unless-stopped

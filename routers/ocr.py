@@ -6,10 +6,13 @@ from models.RestfulModel import *
 from paddleocr import PaddleOCR
 from utils.ImageHelper import base64_to_ndarray, bytes_to_ndarray
 import requests
+import os
+
+OCR_LANGUAGE = os.environ.get("OCR_LANGUAGE", "ch")
 
 router = APIRouter(prefix="/ocr", tags=["OCR"])
 
-ocr = PaddleOCR(use_angle_cls=True, lang="ch")
+ocr = PaddleOCR(use_angle_cls=True, lang=OCR_LANGUAGE)
 
 
 @router.get('/predict-by-path', response_model=RestfulModel, summary="识别本地图片")
