@@ -59,7 +59,7 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
 2. Building a Docker Image
 
    ```shell
-   docker build -t paddleocrfastapi:<your_tag> .
+   docker build -t paddleocrfastapi:latest .
    ```
 
 3. Edit `docker-compose.yml`
@@ -71,7 +71,7 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
 
      paddleocrfastapi:
        container_name: paddleocrfastapi # Custom Container Name
-       image: paddleocrfastapi:<your_tag> # Customized Image Name & Label in Step 2
+       image: paddleocrfastapi:lastest # Customized Image Name & Label in Step 2
        environment:
          - TZ=Asia/Hong_Kong
          - OCR_LANGUAGE=ch # support 80 languages. refer to https://github.com/Mushroomcat9998/PaddleOCR/blob/main/doc/doc_en/multi_languages_en.md#language_abbreviations
@@ -102,7 +102,7 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
 3. Rebuild the docker image, or run the `main.py` directly.
 
 ## Screenshots
-
+API Docs: `/docs`
 ![Swagger](https://raw.githubusercontent.com/cgcel/PaddleOCRFastAPI/dev/screenshots/Swagger.png)
 
 ## Todo
