@@ -55,7 +55,7 @@
 2. 制作 Docker 镜像
 
    ```shell
-   docker build -t paddleocrfastapi:<your_tag> .
+   docker build -t paddleocrfastapi:latest .
    ```
 
 3. 编辑 `docker-compose.yml`
@@ -67,7 +67,7 @@
 
      paddleocrfastapi:
        container_name: paddleocrfastapi # 自定义容器名
-       image: paddleocrfastapi:<your_tag> # 第2步自定义的镜像名与标签
+       image: paddleocrfastapi:latest # 第2步自定义的镜像名与标签
        environment:
          - TZ=Asia/Hong_Kong
        ports:
@@ -97,6 +97,7 @@
 3. 重新创建 docker 镜像, 或直接运行 `main.py`.
 
 ## 运行截图
+API 文档：`/docs`
 
 ![Swagger](https://raw.githubusercontent.com/cgcel/PaddleOCRFastAPI/dev/screenshots/Swagger.png)
 
