@@ -3,6 +3,7 @@ version: "3"
 services:
 
   PaddleOCR:
+    build: . 
     container_name: paddle_ocr_api # 自定义容器名
     image: paddleocrfastapi:latest # 第2步自定义的镜像名与标签
     environment:
