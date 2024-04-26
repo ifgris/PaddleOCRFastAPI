@@ -3,11 +3,12 @@ version: "3"
 services:
 
   PaddleOCR:
+    build: . 
     container_name: paddle_ocr_api # 自定义容器名
     image: paddleocrfastapi:latest # 第2步自定义的镜像名与标签
     environment:
       - TZ=Asia/Hong_Kong
       - OCR_LANGUAGE=ch
     ports:
-    - 8000:8000 # 自定义服务暴露端口, 8000为FastAPI默认端口, 不做修改
+    - "8000:8000" # 自定义服务暴露端口, 8000为FastAPI默认端口, 不做修改,只能改前面的8000,不要忘了引号
     restart: unless-stopped
