@@ -4,9 +4,10 @@ services:
 
   PaddleOCR:
     container_name: paddle_ocr_api # 自定义容器名
-    image: paddleocrapi:latest # 第2步自定义的镜像名与标签
+    image: blazordevlab/paddleocrapi:latest # 第2步自定义的镜像名与标签
     environment:
       - TZ=Asia/Hong_Kong
+      - OCR_LANGUAGE=ch
     ports:
     - 8000:8000 # 自定义服务暴露端口, 8000为FastAPI默认端口, 不做修改
     restart: unless-stopped
