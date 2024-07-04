@@ -6,7 +6,7 @@
 #
 fastapi==0.101.0
     # via -r requirements.in
-paddleocr==2.7.3
+paddleocr==2.8.0
     # via -r requirements.in
 paddlepaddle==2.5.2
     # via -r requirements.in
