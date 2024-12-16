@@ -2,7 +2,7 @@
 
 ![GitHub](https://img.shields.io/github/license/cgcel/PaddleOCRFastAPI)
 
-[中文](https://github.com/cgcel/PaddleOCRFastAPI/blob/master/README_CN.md)
+[中文](https://github.com/imweijh/PaddleOCRFastAPI/blob/master/README_CN.md)
 
 A simple way to deploy `PaddleOCR` based on `FastAPI`.
 
@@ -82,7 +82,7 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
          - TZ=Asia/Hong_Kong
          - OCR_LANGUAGE=ch # support 80 languages. refer to https://github.com/Mushroomcat9998/PaddleOCR/blob/main/doc/doc_en/multi_languages_en.md#language_abbreviations
        ports:
-        - 8000:8000 # Customize the service exposure port, 8000 is the default FastAPI port, do not modify
+        - "8000:8000" # Customize the service exposure port, 8000 is the default FastAPI port, do not modify
        restart: unless-stopped
    ```
 
