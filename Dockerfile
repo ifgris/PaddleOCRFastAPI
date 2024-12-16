@@ -23,5 +23,14 @@ RUN pip3 install -r requirements.txt
 # Copy the rest
 COPY . /app
 
+RUN mkdir -p /root/.paddleocr/whl/cls/
+RUN mkdir -p /root/.paddleocr/whl/det/ch/
+RUN mkdir -p /root/.paddleocr/whl/rec/ch/
+# 解压手工下载的模型
+RUN tar xf /app/pp-ocrv4/ch_ppocr_mobile_v2.0_cls_infer.tar -C /root/.paddleocr/whl/cls/ 2>/dev/null
+RUN tar xf /app/pp-ocrv4/ch_PP-OCRv4_det_infer.tar -C /root/.paddleocr/whl/det/ch/
+RUN tar xf /app/pp-ocrv4/ch_PP-OCRv4_rec_infer.tar -C /root/.paddleocr/whl/rec/ch/
+RUN rm -rf /app/pp-ocrv4/*.tar
+
 # CMD ["python3", "./main.py"]
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--workers", "2"]
