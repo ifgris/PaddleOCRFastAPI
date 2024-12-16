@@ -55,6 +55,12 @@
 2. 制作 Docker 镜像
 
    ```shell
+   cd PaddleOCRFastAPI
+   # 手工下载模型，避免程序第一次运行时自动下载。实现完全离线，加快启动速度
+   cd pp-ocrv4/ && sh download_det_cls_rec.sh
+
+   # 返回Dockfile所在目录，开始build
+   cd ..
    docker build -t paddleocrfastapi:latest .
    ```
 
@@ -71,7 +77,7 @@
        environment:
          - TZ=Asia/Hong_Kong
        ports:
-        - 8000:8000 # 自定义服务暴露端口, 8000 为 FastAPI 默认端口, 不做修改
+        - "8000:8000" # 自定义服务暴露端口, 8000 为 FastAPI 默认端口, 不做修改
        restart: unless-stopped
    ```
 
