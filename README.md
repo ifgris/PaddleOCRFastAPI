@@ -59,6 +59,12 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
 2. Building a Docker Image
 
    ```shell
+   cd PaddleOCRFastAPI
+   # 手工下载模型，避免程序第一次运行时自动下载，实现完全离线，加快启动速度
+   cd pp-ocrv4/ && sh download_det_cls_rec.sh
+   
+   # 返回Dockfile所在目录，开始build
+   cd ..
    docker build -t paddleocrfastapi:latest .
    ```
 
