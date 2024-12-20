@@ -65,7 +65,9 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
    
    # 返回Dockfile所在目录，开始build
    cd ..
-   docker build -t paddleocrfastapi:latest .
+   # 使用宿主机网络
+   # 可直接使用宿主机上的代理设置，比如http_proxy和https_proxy
+   docker build -t paddleocrfastapi:latest --network host .
    ```
 
 3. Edit `docker-compose.yml`

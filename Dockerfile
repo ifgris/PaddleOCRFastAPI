@@ -18,7 +18,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 # pip换源并安装python依赖
 RUN python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 RUN pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-RUN pip3 install -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Copy the rest
 COPY . /app

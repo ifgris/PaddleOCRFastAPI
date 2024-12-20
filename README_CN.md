@@ -61,7 +61,9 @@
 
    # 返回Dockfile所在目录，开始build
    cd ..
-   docker build -t paddleocrfastapi:latest .
+   # 使用宿主机网络build
+   # 可以用宿主机上的http_proxy和https_proxy
+   docker build -t paddleocrfastapi:latest --network host .
    ```
 
 3. 编辑 `docker-compose.yml`
