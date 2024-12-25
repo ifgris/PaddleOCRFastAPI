@@ -66,7 +66,8 @@ Test completed in `Centos 7`, `Ubuntu 20.04`, `Ubuntu 22.04`, `Windows 10`, `Win
    # 返回Dockfile所在目录，开始build
    cd ..
    # 使用宿主机网络
-   # 可直接使用宿主机上的代理设置，比如http_proxy和https_proxy
+   # 可直接使用宿主机上的代理设置，例如在build时，用宿主机上的代理
+   # docker build -t paddleocrfastapi:latest --network host --build-arg HTTP_PROXY=http://127.0.0.1:8888 --build-arg HTTPS_PROXY=http://127.0.0.1:8888 .
    docker build -t paddleocrfastapi:latest --network host .
    ```
 
