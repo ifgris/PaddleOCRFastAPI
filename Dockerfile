@@ -41,4 +41,4 @@ RUN mkdir -p /root/.paddleocr/whl/cls/ && \
     rm -rf /app/pp-ocrv4/*.tar
 
 # 启动命令
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--workers", "2"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--workers", "2", "--log-config", "./logging.conf"]
