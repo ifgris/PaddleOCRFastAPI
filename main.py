@@ -4,6 +4,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 # import uvicorn
+import yaml
 
 from models.RestfulModel import *
 from routers import ocr
