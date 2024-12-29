@@ -18,6 +18,7 @@ requests==2.31.0
     # via -r requirements.in
 numpy==1.23.5
     # via -r requirements.in
-    
+pyyaml
+
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
